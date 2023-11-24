@@ -1,17 +1,14 @@
 @echo off
 
-REM �ċN����̖{�����Akonami�t�H���_�̈ړ���USB�������݋֎~�̖������Ǝ��g�̃X�^�[�g�A�b�v���폜
+REM 再起動後の本処理、konamiフォルダの移動とUSB書き込み禁止の無効化と自身のスタートアップを削除
 
-REM �Ώۂ̃f�B���N�g�����Ɏ��s���Ă���v���O����������ƃt�H���_�̑��삪�ł��Ȃ����߁A�f�B���N�g������exe�t�@�C�����ׂĂ��^�X�N�L��
+REM 対象のディレクトリ内に実行しているプログラムがあるとフォルダの操作ができないため、ディレクトリ内のexeファイルすべてをタスクキル
 cd /d C:\konami
 for %%i in (*.exe) do taskkill /f /im "%%i"
 
 cd C:\
 xcopy C:\konami G:\konami\
 rd /s /q C:\konami
-
-reg delete HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\StorageDevicePolicies /f
-
 del /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\step1.bat"
 
 explorer
