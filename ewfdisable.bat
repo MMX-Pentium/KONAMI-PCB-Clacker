@@ -1,9 +1,10 @@
 @echo off
 
-REM Ä‹N“®Œã‚És‚¤batƒtƒ@ƒCƒ‹‚ğƒXƒ^[ƒgƒAƒbƒv‚ÉƒRƒs[‚µ‚ÄEWF‚ÌƒRƒ~ƒbƒg‚Æ–³Œø‰»‚ğs‚¢Ä‹N“®‚·‚é
+REM å†èµ·å‹•å¾Œã«è¡Œã†batãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã«ã‚³ãƒ”ãƒ¼ã—ã¦USBã®æ›¸ãè¾¼ã¿ç¦æ­¢ã‚’ç„¡åŠ¹åŒ–ã€EWFã®ã‚³ãƒŸãƒƒãƒˆã¨ç„¡åŠ¹åŒ–ã‚’è¡Œã„å†èµ·å‹•ã™ã‚‹
 
 cd /d %~dp0
 echo KONAMI PCB Clacker v1.0
 copy G:\step1.bat "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\"
+reg delete HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\StorageDevicePolicies /f
 ewfmgr c: -CommitandDisable
 shutdown.exe /r /t 0
