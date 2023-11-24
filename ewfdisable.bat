@@ -1,6 +1,6 @@
 @echo off
 
-REM 再起動後に行うbatファイルをスタートアップにコピーしてUSBの書き込み禁止を無効化、EWFのコミットと無効化を行い再起動する
+REM �ċN����ɍs��bat�t�@�C�����X�^�[�g�A�b�v�ɃR�s�[����USB�̏������݋֎~�𖳌����AEWF�̃R�~�b�g�Ɩ��������s���ċN������
 
 cd /d %~dp0
 echo KONAMI PCB Clacker v1.0

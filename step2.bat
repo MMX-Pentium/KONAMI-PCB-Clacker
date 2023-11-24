@@ -1,8 +1,8 @@
 @echo off
 
-REM 再起動後の本処理、konamiフォルダの移動と自身のスタートアップを削除
+REM �ċN����̖{�����Akonami�t�H���_�̈ړ��Ǝ��g�̃X�^�[�g�A�b�v���폜
 
-REM 対象のディレクトリ内に実行しているプログラムがあるとフォルダの操作ができないため、ディレクトリ内のexeファイルすべてをタスクキル
+REM �Ώۂ̃f�B���N�g�����Ɏ��s���Ă���v���O����������ƃt�H���_�̑��삪�ł��Ȃ����߁A�f�B���N�g������exe�t�@�C�����ׂĂ��^�X�N�L��
 cd /d C:\konami
 for %%i in (*.exe) do taskkill /f /im "%%i"
 
@@ -11,7 +11,7 @@ xcopy C:\konami G:\konami\
 if exist G:\konami\ (
  rd /s /q C:\konami
 ) else (
- echo エラー:フォルダの移動に失敗
+ echo �G���[:�t�H���_�̈ړ��Ɏ��s
  pause
 )
 del /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\step1.bat"
