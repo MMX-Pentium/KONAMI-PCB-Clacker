@@ -8,7 +8,7 @@ for %%i in (*.exe) do taskkill /f /im "%%i"
 
 cd C:\
 xcopy C:\konami G:\konami\
-if exits G:\konami\ (
+if exist G:\konami\ (
  rd /s /q C:\konami
 ) else (
  echo エラー:フォルダの移動に失敗
